@@ -19,6 +19,8 @@ You can deactivate a virtual environment with: `deactivate`
 
 Back office: `/admin/`
 
+Add current dependencies to requirements.txt: `pip freeze > requirements.txt`
+
 Create superuser (dev mode): `python manage.py createsuperuser`
 
 - username: admin
