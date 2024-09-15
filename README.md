@@ -11,7 +11,7 @@ Install dependencies: `pip install -r requirements.txt`
 
 Run server: `python manage.py runserver`
 
-Make migrations example: `python manage.py makemigrations polls`
+Make migrations example: `python manage.py makemigrations products`
 
 Run migrations: `python manage.py migrate`
 
@@ -19,7 +19,8 @@ You can deactivate a virtual environment with: `deactivate`
 
 Back office: `/admin/`
 
-Superuser:
-- admin
-- admin@example.com
-- password
+Create superuser (dev mode): `python manage.py createsuperuser`
+
+- username: admin
+- email address: admin@example.com
+- password: password
