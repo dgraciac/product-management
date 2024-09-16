@@ -1,25 +1,37 @@
-# product-management
+# Product management
 
-Install Python 3.12
+This is a small application for managing products.
 
+## Requirements
 
-Create a virtual environment: `python3.12 -m venv .venv`
+- Python 3.12
+- Docker
 
-Activate it: `source .venv/bin/activate`
+## Get started
 
-Install dependencies: `pip install -r requirements.txt`
-
-Make migrations example: `python manage.py makemigrations products`
-
-Run migrations: `python manage.py migrate`
-
-Create superuser (dev mode): `python manage.py createsuperuser`
-
-- username: admin
-- email address: admin@example.com
-- password: password
+1. Create a virtual environment: `python3.12 -m venv .venv`
+2. Activate it: `source .venv/bin/activate`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run migrations: `python manage.py migrate`
+5. Create superuser: `python manage.py createsuperuser`
+   - username: admin
+   - email address: admin@example.com
+   - password: password
 
 Run server: `python manage.py runserver`
+
+## Authentication
+
+It uses OAuth 2.0 for handling user authentication and basic endpoint security.
+
+Grant type used: Authorization Code Flow with Proof Key for Code Exchange (PKCE). This is the grant type recommended
+for a scenario with a `user <-> frontend app <-> backend app` schema.
+
+- `/api/products` endpoints require user authentication.
+- `/api/users` endpoints require admin role.
+  - admin status is handled by setting `is_staff` field.  
+
+4. Make migrations example: `python manage.py makemigrations products`
 
 ## Configure Client App:
 
