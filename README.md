@@ -32,7 +32,7 @@ The app is also deployed at https://product-management-latest.onrender.com (it m
 5. Create superuser: `python manage.py createsuperuser`
     - username: admin
     - email address: admin@example.com
-    - password: password
+    - password: 1234
 6. Run server: `python manage.py runserver`
 7. Configure Client App
     1. Go to http://127.0.0.1:8000/admin/ and login as superuser
@@ -75,3 +75,16 @@ The app is also deployed at https://product-management-latest.onrender.com (it m
        3. Go to the Postman collection settings -> tab `Variables` -> set the `access_token` to `lzosRF6uh60gu75bdH7BngBPr192qV` (only for this example).
 9. Now you can play with the remaining endpoints.
 10. You can use the postman refresh token request when needed.
+
+## Containerization
+
+File `Dockerfile` contains the Docker image definition of the app.
+
+## Continuous deployment
+
+The file `.github/workflows/on-push-to-main.yaml` deploys a new Dockerized App version on Render on every push to main branch.
+
+## Pending things
+
+- Cover functionality with tests.
+- Remove dev mode to be fully ready for production
