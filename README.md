@@ -82,7 +82,7 @@ File `Dockerfile` contains the Docker image definition of the app.
 
 The file `.github/workflows/on-push-to-main.yaml` deploys a new Dockerized App version on Render on every push to main branch.
 
-The app is also deployed at https://product-management-latest.onrender.com (it may take a few minutes to start after first request)
+The app is deployed at https://product-management-latest.onrender.com (it may take a few minutes to start after first request)
 
 ## Pending things
 
