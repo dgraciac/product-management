@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'oauth2_provider',
     'rest_framework',
     'rest_framework.authtoken',
-    'products.apps.ProductsConfig',
+    'api.apps.ApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -149,4 +149,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/accounts/login/'
 
-LOGIN_REDIRECT_URL = '/products/'
+LOGIN_REDIRECT_URL = '/api/'

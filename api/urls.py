@@ -1,9 +1,11 @@
 from django.urls import path
-
+from .views import UserView, UpdateDeleteUserView
 from . import views
 
-app_name = 'products'
+app_name = 'api'
 urlpatterns = [
+    path('users', UserView.as_view(), name='users'),
+    path('users/<int:pk>', UpdateDeleteUserView.as_view(), name='update-delete-user'),
     # ex: /products/
     path("", views.index, name="index"),
     # ex: /products/5/

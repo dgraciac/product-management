@@ -1,5 +1,4 @@
-from django.contrib.auth import views as auth_views
-from .views import UserView, UpdateDeleteUserView
+
 
 """
 URL configuration for project project.
@@ -21,10 +20,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('users', UserView.as_view(), name='users'),
-    path('users/<int:pk>', UpdateDeleteUserView.as_view(), name='update-delete-user'),
     path('accounts/', include("django.contrib.auth.urls")),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path("products/", include("products.urls")),
+    path("api/", include("api.urls")),
     path('admin/', admin.site.urls),
 ]
