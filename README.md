@@ -52,17 +52,17 @@ In the following guide, we assume that we are working in the default local envir
     3. In the same browser where you logged in at http://127.0.0.1:8000/admin/, go to
        `http://127.0.0.1:8000/o/authorize?client_id=EYlpjccPGkcSrpxJWuMWsRAhEDAiqEHAJHklznEz&response_type=code&redirect_uri=http://127.0.0.1:8000/&scope=read write&code_challenge=J4NzDMb_PMmc2Vu25zsGcbv-Ezmun5qXxbwI9JztYVU&code_challenge_method=S256`
        with the following values:
-       1. client_id=\[YOUR CLIENT ID\] 
-       2. response_type=code 
-       3. redirect_url=\[YOUR REDIRECT URI\] 
-       4. scope=read write 
-       5. code_challenge=\[YOUR CODE CHALLENGE\] 
-       6. code_challenge_method=S256
+        1. client_id=\[YOUR CLIENT ID\]
+        2. response_type=code
+        3. redirect_url=\[YOUR REDIRECT URI\]
+        4. scope=read write
+        5. code_challenge=\[YOUR CODE CHALLENGE\]
+        6. code_challenge_method=S256
     4. You will be redirected to http://127.0.0.1:8000. Copy the value of the query string `code` that is shown in the URL and save it for next step.
     5. Invoke the endpoint `http://127.0.0.1:8000/o/token/` in the Postman collection replacing the values saved in previous steps.
        (client_id, code, redirect_uri, code_verifier, scope).
     6. You will get a response with this form:
-       1. ```json
+        1. ```json
           {
             "access_token": "lzosRF6uh60gu75bdH7BngBPr192qV",
             "expires_in": 3600,
@@ -71,8 +71,8 @@ In the following guide, we assume that we are working in the default local envir
             "refresh_token": "6eQmI6r7Lwc1Qs6PNxKWvglTUn9phR"
           }
           ```
-       2. Save the previous response.
-       3. Go to the Postman collection settings -> tab `Variables` -> set the `access_token` to `lzosRF6uh60gu75bdH7BngBPr192qV` (only for this example).
+        2. Save the previous response.
+        3. Go to the Postman collection settings -> tab `Variables` -> set the `access_token` to `lzosRF6uh60gu75bdH7BngBPr192qV` (only for this example).
 9. Now you can play with the remaining endpoints.
 10. You can use the postman refresh token request when needed.
 
@@ -90,3 +90,4 @@ The app is deployed at https://product-management-latest.onrender.com (it may ta
 
 - Cover functionality with tests.
 - Remove dev mode to be fully ready for production
+- Replace sqlite connection by same type as production (e.g. Postrgres)
