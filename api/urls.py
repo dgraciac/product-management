@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import UserView, UpdateDeleteUserView, ProductView, GetUpdateDeleteProductView
-from . import views
+from .user_views import UserView, UpdateDeleteUserView
+from .product_views import ProductView, GetUpdateDeleteProductView
 
 app_name = 'api'
 urlpatterns = [
