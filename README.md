@@ -7,7 +7,9 @@ This is a small application for managing products.
 - Python 3.12
 - Docker
 
-## Authentication
+## Endpoints and Authentication
+
+There is a Postman collection in the repository root so you can explore all the endpoints available.
 
 It uses OAuth 2.0 for handling user authentication and basic endpoint security.
 
