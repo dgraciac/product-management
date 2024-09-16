@@ -80,15 +80,15 @@ scope=read write
 code_challenge=\[YOUR CODE CHALLENGE\]
 code_challenge_method=S256
 
-Code verifier: gIKQjvleVEHqP0oRV3keJLwX2W6E5_cAqN2CbxAlO7E
-Code Challenge: J4NzDMb_PMmc2Vu25zsGcbv-Ezmun5qXxbwI9JztYVU 
+Code verifier: nw2F7ZlMo_7BZRLoChjtZI6ARm2Ni_AOOmGyaRuh2pc
+Code Challenge: q8VeE3Oy0Seu_WNbPnwL8ou7Sva1Uvuyn45d7gaaJ9o 
 
 ### Step 2
 
 {
-"access_token": "pdfpX2UenOb5xqjjjoe02al7vFLA50",
+"access_token": "lzosRF6uh60gu75bdH7BngBPr192qV",
 "expires_in": 3600,
 "token_type": "Bearer",
 "scope": "read write",
-"refresh_token": "LJmilFh5rX6vRmE4Y71slMewnp10sl"
+"refresh_token": "6eQmI6r7Lwc1Qs6PNxKWvglTUn9phR"
 }
