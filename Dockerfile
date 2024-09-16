@@ -22,7 +22,6 @@ ENV PYTHONUNBUFFERED=1
 
 # Recuerda cambiar 'myproject' por el nombre de tu proyecto en 'myproject.settings'
 # Se asegura que todas las migraciones estén aplicadas al iniciar el contenedor
-RUN python manage.py collectstatic --noinput
 RUN python manage.py migrate
 
 # Define el comando de ejecución que corre el servidor de desarrollo de Django
