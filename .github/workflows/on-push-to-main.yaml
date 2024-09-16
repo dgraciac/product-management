@@ -29,6 +29,9 @@ jobs:
       - name: Build Docker images
         run: |
           docker build \
+          --build-arg DJANGO_SUPERUSER_USERNAME=${{ secrets.DJANGO_SUPERUSER_USERNAME }} \
+          --build-arg DJANGO_SUPERUSER_PASSWORD=${{ secrets.DJANGO_SUPERUSER_PASSWORD }} \
+          --build-arg DJANGO_SUPERUSER_EMAIL=${{ secrets.DJANGO_SUPERUSER_EMAIL }} \
           -t ${{ env.IMAGE_LATEST_URL }} \
           -t ${{ env.IMAGE_COMMIT_SHA_URL }} \
           --platform=linux/amd64 \
