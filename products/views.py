@@ -1,18 +1,19 @@
 from django.shortcuts import get_object_or_404, render
 
-# Create your views here.
-from django.http import Http404
 from django.http import HttpResponse
 from .models import Product
 
-def index(request):
-    latest_question_list = Product.objects.order_by("-pub_date")[:5]
-    context = {"latest_question_list": latest_question_list}
-    return render(request, "products/index.html", context)
+from oauth2_provider.decorators import protected_resource
 
-def detail(request, question_id):
-    question = get_object_or_404(Product, pk=question_id)
-    return render(request, "products/detail.html", {"question": question})
+@protected_resource()
+def index(request):
+    products = Product.objects.all()
+    output = ", ".join([product.name for product in products])
+    return HttpResponse(output)
+
+def detail(request, product_id):
+    question = get_object_or_404(Product, pk=product_id)
+    return question
 
 
 def results(request, question_id):

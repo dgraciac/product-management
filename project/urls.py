@@ -1,3 +1,6 @@
+from django.contrib.auth import views as auth_views
+from .views import RegisterView
+
 """
 URL configuration for project project.
 
@@ -18,6 +21,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    path('register', RegisterView.as_view(), name='register'),
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path("products/", include("products.urls")),
     path('admin/', admin.site.urls),
 ]
