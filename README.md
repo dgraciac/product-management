@@ -14,7 +14,7 @@ It uses OAuth 2.0 for handling user authentication and basic endpoint security.
 Grant type used: **Authorization Code Flow with Proof Key for Code Exchange (PKCE)**. This is the grant type recommended
 for a scenario with a `user <-> frontend app <-> backend app` schema.
 
-- `/api/products` endpoints r**equire user authentication only**.
+- `/api/products` endpoints **require user authentication only**.
 - `/api/users` endpoints **require user authentication plus admin role**.
     - admin status is handled by setting `is_staff` field.
 - `/o/authorize` and `/o/token/` endpoints allow handling of user authentication.
@@ -71,17 +71,3 @@ for a scenario with a `user <-> frontend app <-> backend app` schema.
        3. Go to the Postman collection settings -> tab `Variables` -> set the `access_token` to `lzosRF6uh60gu75bdH7BngBPr192qV` (only for this example).
 9. Now you can play with the remaining endpoints.
 10. You can use the postman refresh token request when needed.
-
-
-
-4. Make migrations example: `python manage.py makemigrations products`
-
-## Configure Client App:
-
-
-You can deactivate a virtual environment with: `deactivate`
-
-Back office: `/admin/`
-
-Add current dependencies to requirements.txt: `pip freeze > requirements.txt`
-
