@@ -21,6 +21,10 @@ for a scenario with a `user <-> frontend app <-> backend app` schema.
 
 ## Get started
 
+In the following guide, we assume that we are working in the default local environment (http://127.0.0.1:8000).
+
+The app is also deployed at https://product-management-latest.onrender.com (it may take a few minutes to start after first request)
+
 1. Create a virtual environment: `python3.12 -m venv .venv`
 2. Activate it: `source .venv/bin/activate`
 3. Install dependencies: `pip install -r requirements.txt`
